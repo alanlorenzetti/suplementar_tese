@@ -99,6 +99,6 @@ rmarkdown::render(input = "scripts/02_create_website.R",
 # securing page
 system2(command = "staticrypt",
         args = c("./index.html",          # file to be encrypted
-                 "", # my pw here; see thesis doc
+                 "",                      # my pw here; see thesis doc
                  "-e",                    # embedded cryto.js in the page
                  "-o", "./index.html"))   # output file
