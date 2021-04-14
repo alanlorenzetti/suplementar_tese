@@ -2,7 +2,6 @@ suplementar_tese.Rproj
 /plots
 /data
 /reports
-/results
 addCommitPush.sh
 *.Rproj.user
 .Rproj.user

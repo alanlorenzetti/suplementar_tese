@@ -91,6 +91,11 @@ table[["s5"]] = table[["s5"]] %>%
 #             file = paste0("data/table_", i, ".tsv"))
 # }
 
+# getting extended version of heatmap
+if(!dir.exists("results")){dir.create("results")}
+file.copy(from = "~/gdrive/documentos/doutorado/isb/tlr_v2/plots/tese/abundanceHeatmap_expanded.pdf",
+          to = "~/gdrive/suplementar_tese/results/")
+
 # loading and rendering using knitr ####
 rmarkdown::render(input = "scripts/02_create_website.R",
                   output_dir = ".",
@@ -99,6 +104,6 @@ rmarkdown::render(input = "scripts/02_create_website.R",
 # securing page
 system2(command = "staticrypt",
         args = c("./index.html",          # file to be encrypted
-                 "",                      # my pw here; see thesis doc
+                 "''",                      # my pw here; see thesis doc
                  "-e",                    # embedded cryto.js in the page
                  "-o", "./index.html"))   # output file
